@@ -1,0 +1,77 @@
+conversation(display_name="Megan")
+  case lastResponse
+    when "finalstate"
+      statement#final
+      responses
+    
+    when "program"
+      statement#megan
+      responses
+        response#finalstate.
+          JavaScript, Python, C, Bash, Java, Kotlin
+
+    when "database"
+      statement#megan
+      responses
+        response#finalstate.
+          MySQL
+
+    when "tools"
+      statement#megan
+      responses
+        response#finalstate.
+          Git, SVN, Jira, Kubernetes, OpenVINO, Aruba
+           
+    when "cloud"
+      statement#megan
+      responses
+        response#finalstate.
+          Google Cloud, Microsoft Azure, Oracle Cloud
+
+    when "platform"
+      statement#megan
+      responses
+        response#finalstate.
+          Postman API, Salesforce, UiPath
+
+    when "it"
+      statement#megan
+      responses
+        response#program.
+          Programming Languages
+        response#database.
+          Database Languages
+        response#tools.
+          Tools
+        response#cloud.
+          Cloud Platforms
+        response#platform.
+          Platforms
+
+    when "soft"
+      statement#megan
+      responses
+        response#finalstate.
+          Public Speaking, Teamwork, Time management, Work ethic
+
+    default
+      statement#default
+      responses
+        response#it.
+          IT Skills
+        response#soft.
+          Soft Skills
+
+
+  statements
+    statement#default
+      text.
+        Hey! My name is Megan. Do you want to know skills of Vaibhav? If yes, allow me to tell you.
+      speech.
+        Welcome aboard the #[break(strength="medium")] visitor!
+    statement#megan
+      text.
+        ...as previously mentioned, my name is Megan?
+    statement#final
+      text.
+        Thank you!

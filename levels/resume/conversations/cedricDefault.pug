@@ -1,0 +1,55 @@
+conversation(display_name="Cedric")
+  case lastResponse
+    when "finalstate"
+      statement#final
+      responses
+    
+    when "btech"
+      statement#cedric
+      responses
+        response#finalstate.
+          Bachelor of Technology in Electronics Engineering from Dr. Ambedkar Institute of Technlogy for Handicapped.
+
+    when "bsc"
+      statement#cedric
+      responses
+        response#finalstate.
+          Bachelor of Science in Mathematics from Indira Gandhi National Open University.
+
+    when "inter"
+      statement#cedric
+      responses
+        response#finalstate.
+          Intermediate with Mathematics, Physics, Chemistry, English and Music from MVM Public School.
+           
+    when "high"
+      statement#cedric
+      responses
+        response#finalstate.
+          High School from Jawahar Navodaya Vidyalaya.
+
+    default
+      statement#default
+      responses
+        response#btech.
+          B. Tech. 
+        response#bsc.
+          B. Sc.
+        response#inter.
+          Intermediate
+        response#high.
+          High School
+
+
+  statements
+    statement#default
+      text.
+        Hi! I am Cedric. I will to telling you about #[span.highlight Vaibhav's] education.
+      speech.
+        Welcome aboard the #[break(strength="medium")] visitor!
+    statement#cedric
+      text.
+        ...as previously mentioned, my name is Cedric?
+    statement#final
+      text.
+        Thank you!

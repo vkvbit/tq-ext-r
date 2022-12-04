@@ -1,0 +1,85 @@
+conversation(display_name="Ryan")
+  case lastResponse
+    when "finalstate"
+      statement#final
+      responses
+    
+    when "gdsc"
+      statement#ryan
+      responses
+        response#finalstate.
+          Tech Lead of Google Developer Student Club
+
+    when "uipath"
+      statement#ryan
+      responses
+        response#finalstate.
+          Technical Head of UiPath Community
+
+    when "nscc"
+      statement#ryan
+      responses
+        response#finalstate.
+          Vice President of Newton School Coding Club
+           
+    when "htb"
+      statement#ryan
+      responses
+        response#finalstate.
+          Admin
+        response#finalstate.
+          Founder
+
+    when "gdsc_ex"
+      statement#ryan
+      responses
+        response#finalstate.
+          Cloud Co-Ordinator at Google Developer Student Club
+
+    when "gfg"
+      statement#ryan
+      responses
+        response#finalstate.
+          Campus Mantri
+
+    when "current"
+      statement#ryan
+      responses
+        response#gdsc.
+          GDSC
+        response#uipath.
+          UiPath
+        response#nscc.
+          NSCC
+        response#htb.
+          HTB
+
+    when "previous"
+      statement#ryan
+      responses
+        response#gdsc_ex.
+          GDSC
+        response#gfg.
+          GFG
+
+    default
+      statement#default
+      responses
+        response#current.
+          Currently holding positions
+        response#previous.
+          Previously held positions
+
+
+  statements
+    statement#default
+      text.
+        My name is Ryan. I going to tell you about roles and resposiblities held by Vaibhav.
+      speech.
+        Welcome aboard the #[break(strength="medium")] visitor!
+    statement#ryan
+      text.
+        ...as previously mentioned, my name is Ryan?
+    statement#final
+      text.
+        Thank you!

@@ -1,0 +1,15 @@
+{
+  "title": "Welcome objective",
+  "description": "<strong>Welcome!</strong> to my TwilioQuest extension which is based on my resume.",
+  "validation_fields": [
+    {
+      "name": "answer1",
+      "type": "text",
+      "placeholder": "type your answer here",
+      "label": "Are you ready to see my Profile?"
+    }
+  ],
+  "rewards": {
+    "xp": 100
+  }
+}
